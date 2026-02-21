@@ -1087,8 +1087,8 @@ Default Gateway: <span class="comment">(lasciare vuoto)</span>
             PC-Beta1 → Desktop → IP Configuration
         </div>
         <div class="code-body">
-IP Address:     <span class="placeholder">192.168.0.3</span>
-Subnet Mask:    <span class="placeholder">255.255.255.248</span>
+IP Address:     <span class="placeholder">192.168.0.33</span>
+Subnet Mask:    <span class="placeholder">255.255.255.224</span>
 Default Gateway: <span class="comment">(lasciare vuoto)</span>
         </div>
     </div>
@@ -1102,8 +1102,8 @@ Default Gateway: <span class="comment">(lasciare vuoto)</span>
             PC-Beta2 → Desktop → IP Configuration
         </div>
         <div class="code-body">
-IP Address:     <span class="placeholder">192.168.0.4</span>
-Subnet Mask:    <span class="placeholder">255.255.255.248</span>
+IP Address:     <span class="placeholder">192.168.0.34</span>
+Subnet Mask:    <span class="placeholder">255.255.255.224</span>
 Default Gateway: <span class="comment">(lasciare vuoto)</span>
         </div>
     </div>
@@ -1117,8 +1117,8 @@ Default Gateway: <span class="comment">(lasciare vuoto)</span>
             PC-Gamma1 → Desktop → IP Configuration
         </div>
         <div class="code-body">
-IP Address:     <span class="placeholder">192.168.0.5</span>
-Subnet Mask:    <span class="placeholder">255.255.255.248</span>
+IP Address:     <span class="placeholder">192.168.0.65</span>
+Subnet Mask:    <span class="placeholder">255.255.255.252</span>
 Default Gateway: <span class="comment">(lasciare vuoto)</span>
         </div>
     </div>
@@ -1132,8 +1132,8 @@ Default Gateway: <span class="comment">(lasciare vuoto)</span>
             PC-Gamma2 → Desktop → IP Configuration
         </div>
         <div class="code-body">
-IP Address:     <span class="placeholder">192.168.0.6</span>
-Subnet Mask:    <span class="placeholder">255.255.255.248</span>
+IP Address:     <span class="placeholder">192.168.0.66</span>
+Subnet Mask:    <span class="placeholder">255.255.255.252</span>
 Default Gateway: <span class="comment">(lasciare vuoto)</span>
         </div>
     </div>
@@ -1459,11 +1459,11 @@ Default Gateway: <span class="comment">(lasciare vuoto)</span>
             </div>
             <div class="packet-field">
                 <span class="field-name">Source IP</span>
-                <span class="field-value" style="color: var(--accent-pink);">192.168.0.______  (IP di PC-Alfa2 — ora è la sorgente!)</span>
+                <span class="field-value" style="color: var(--accent-pink);">192.168.0.2  (IP di PC-Alfa2 — ora è la sorgente!)</span>
             </div>
             <div class="packet-field">
                 <span class="field-name">Destination IP</span>
-                <span class="field-value" style="color: var(--accent-pink);">192.168.0.______  (IP di PC-Alfa1 — ora è la destinazione!)</span>
+                <span class="field-value" style="color: var(--accent-pink);">192.168.0.1  (IP di PC-Alfa1 — ora è la destinazione!)</span>
             </div>
         </div>
         <div class="packet-layer">
@@ -1482,11 +1482,9 @@ Default Gateway: <span class="comment">(lasciare vuoto)</span>
         </div>
     </div>
 
-    <div class="img-placeholder">
-        <div class="icon">🔬</div>
-        <div class="label">[IMG_18] — PDU Information dell'Echo Reply: nota gli IP invertiti e Type = 0</div>
-        <div class="hint">Cattura i dettagli del pacchetto di risposta, evidenziando il campo Type e gli IP invertiti</div>
-    </div>
+    <div class="img-container">
+		<img src="Simulation_8.png" alt="Simulazione 8" style="max-width: 100%; height: auto;">
+	</div>
 </section>
 
 <!-- ═══════════════════════════ SEZIONE 8 ═══════════════════════════ -->
@@ -1515,16 +1513,16 @@ Default Gateway: <span class="comment">(lasciare vuoto)</span>
                     PC-Alfa1 > Command Prompt
                 </div>
                 <div class="code-body">
-<span class="cmd">C:\&gt;</span> ping <span class="placeholder">192.168.0.______</span>  <span class="comment">&lt;-- IP di PC-Beta1</span>
+<span class="cmd">C:\&gt;</span> ping <span class="placeholder">192.168.0.33</span>  <span class="comment">&lt;-- IP di PC-Beta1</span>
 
-<span class="output">Pinging 192.168.0.______ with 32 bytes of data:</span>
+<span class="output">Pinging 192.168.0.33 with 32 bytes of data:</span>
 
 <span class="highlight">Request timed out.</span>
 <span class="highlight">Request timed out.</span>
 <span class="highlight">Request timed out.</span>
 <span class="highlight">Request timed out.</span>
 
-<span class="output">Ping statistics for 192.168.0.______:</span>
+<span class="output">Ping statistics for 192.168.0.33:</span>
 <span class="output">    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss)</span>
                 </div>
             </div>
@@ -1542,11 +1540,9 @@ Default Gateway: <span class="comment">(lasciare vuoto)</span>
         </p>
     </div>
 
-    <div class="img-placeholder">
-        <div class="icon">❌</div>
-        <div class="label">[IMG_19] — Output del comando ping da PC-Alfa1 verso PC-Beta1 (fallimento - Request timed out)</div>
-        <div class="hint">Cattura il Command Prompt di PC-Alfa1 con il ping fallito verso un IP della Rete Beta</div>
-    </div>
+    <div class="img-container">
+		<img src="Verifica_Isolamento_1.png" alt="Verifica Isolamento 1" style="max-width: 100%; height: auto;">
+	</div>
 
     <h3>Analisi nella Simulation Mode del ping fallito</h3>
 
@@ -1567,11 +1563,9 @@ Default Gateway: <span class="comment">(lasciare vuoto)</span>
         </div>
     </div>
 
-    <div class="img-placeholder">
-        <div class="icon">🚫</div>
-        <div class="label">[IMG_20] — Simulation Mode: il pacchetto da PC-Alfa1 verso PC-Beta1 viene scartato (X rossa)</div>
-        <div class="hint">Cattura la topologia in Simulation Mode mostrando la X rossa sul pacchetto scartato</div>
-    </div>
+    <div class="img-container">
+		<img src="Verifica_Isolamento_2.png" alt="Verifica Isolamento 2" style="max-width: 100%; height: auto;">
+	</div>
 
     <div class="step">
         <div class="step-num">3</div>
@@ -1586,11 +1580,9 @@ Default Gateway: <span class="comment">(lasciare vuoto)</span>
         </div>
     </div>
 
-    <div class="img-placeholder">
-        <div class="icon">📋</div>
-        <div class="label">[IMG_21] — PDU Information del pacchetto scartato: motivo dello scarto</div>
-        <div class="hint">Cattura la finestra PDU che mostra il messaggio di errore o la spiegazione dello scarto</div>
-    </div>
+    <div class="img-container">
+		<img src="Verifica_Isolamento_3.png" alt="Verifica Isolamento 3" style="max-width: 100%; height: auto;">
+	</div>
 
     <div class="exercise-box">
         <h4>✏️ Esercizio: prova tutte le combinazioni cross-subnet</h4>
